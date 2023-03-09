@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600&display=swap');
+body {
+    background-color: #1f2122;
+    font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 991px) {
+    nav {
+        background-color: #fff;
+    }
+
+    nav .search-bar {
+        display: none;
+    }
+
+    nav .container {
+        position: relative;
+    }
+
+    nav .links {
+        display: block;
+        position: absolute;
+        top: -800%;
+        left: 50%;;
+        z-index: 5555;
+        transform: translateX(-50%);
+        background-color: #fff;
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding: 25px 0;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        transition: 0.3s linear;
+    }
+
+    nav .container .links ul li {
+        margin-bottom: 20px;
+    }
+
+    nav .links ul {
+        display: block !important;
+    }
+
+    nav .links.active {
+        top: 100%;
+    }
+}
+
+.logoImg {
+    width: 200px;
+}
+
+.search-bar {
+    border-left: 2px solid rgb(39, 41, 42);
+}
+
+nav input {
+    background-color: rgb(39, 41, 42);
+    color: rgb(102, 102, 102);
+    padding: 15px 45px 15px 25px;
+    border: none;
+    border-radius: 45px;
+    outline: none;
+}
+
+nav ul li a {
+    color: rgb(102, 102, 102);
+    font-size: 14px;
+    transition: 0.3s linear;
+}
+
+nav ul li a.active, nav ul li:hover a {
+    color: rgb(231, 94, 141);
+}
+
+.profileImg {
+    background-color: rgb(39, 41, 42)
+}
+
+nav .icon span {
+    display: block;
+    margin-top: 5px;
+    height: 2px;
+    width: 25px;
+    background-color:rgb(231, 94, 141);
+    transition: 0.3s linear;
+}
+
+nav .icon span:nth-child(2) {
+    width: 35px;
+}
+
+nav .icon.active span:nth-child(2) {
+    width: 0;
+    height: 0;
+}
+
+nav .icon.active span:nth-child(1) {
+    transform: rotate(45deg);
+    transition-delay: 0.3s;
+}
+
+nav .icon.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition-delay: 0.3s;
+}
+
+section .container {
+    background-color: rgb(39, 41, 42);
+    padding: 60px;
+    border-radius: 23px;
+}
+
+.hide-modal {
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(231, 94, 141);
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+section .container:hover .hide-modal {
+    top: 0;
+}
+
+.top-section {
+    background-image: url(../images/banner-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 120px 60px;
+    border-radius: 23px;
+    color: #fff;
+}
+
+.top-section .content p:nth-child(1) {
+    font-size: 20px;
+    font-weight: 500;;
+}
+
+.top-section .content p:nth-child(2) {
+    font-weight: bolder;
+    font-size: clamp(3.2vw, 25px, 10vw);
+}
+
+.top-section .content p span {
+    color:rgb(231, 94, 141);
+}
+
+.top-section button {
+    background-color: rgb(231, 94, 141);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+.top-section button:hover {
+    background-color: #fff;
+    color: rgb(231, 94, 141);
+}
+
+.games {
+    margin-top: 60px;
+    padding: 30px;
+    border-radius: 23px;
+    background-color: rgb(31, 33, 34)
+}
+
+.games.active {
+    margin-top: 0;
+}
+
+.games h2 {
+    font-size: clamp(3.2vw, 25px, 10vw);
+    font-weight: bolder;
+    color: #fff;
+}
+
+.games h2 span {
+    color:rgb(231, 94, 141);
+}
+
+.games .box {
+    background-color: rgb(39, 41, 42);
+    padding: 30px 15px 5px;
+    border-radius: 23px;
+    cursor: pointer;
+}
+
+.games .box img {
+    border-radius: 23px;;
+}
+
+.free {
+    background-color:rgb(231, 94, 141);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.bottom-content {
+    border-top: 0.5px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 0 0px;
+}
+
+.bottom-content p {
+    color: #fff;
+}
+
+.GameDetail {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+.title,
+.category,
+.platform,
+.status {
+    font-size: 20px;
+    font-weight: bold;;
+}
+
+.tit, .cat, .plat, .stat {
+    font-weight: normal;
+    font-family: 'Courier New', Courier, monospace
+}
+
+.cat, .plat, .stat {
+    background-color: rgb(231, 94, 141);
+    padding: 2px 15px;
+    margin-left: 10px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.desc {
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.anchor {
+    border: 1px solid rgb(231, 94, 141);
+    color: #fff;
+    border-radius: 20px;
+    transition: 0.3s linear;
+    font-weight: bold;
+}
+
+.anchor:hover {
+    color: rgb(231, 94, 141);
+    background-color: #fff;
+    border: 1px solid #fff;
+}
+
+.details i {
+    cursor: pointer;
+}
