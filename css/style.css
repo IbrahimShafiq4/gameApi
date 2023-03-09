@@ -62,6 +62,11 @@ nav input {
     border: none;
     border-radius: 45px;
     outline: none;
+    transition: 0.3s linear;
+}
+
+nav input:focus {
+    box-shadow: 0 0 10px rgb(231, 94, 141)
 }
 
 nav ul li a {

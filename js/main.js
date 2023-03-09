@@ -12,6 +12,8 @@ export let detailsDiv = document.querySelector(".details");
 export let gameBoxContainer = document.querySelector(".games .row");
 let allLinks = document.querySelectorAll("li a");
 let input = document.querySelector("input");
+let btn = document.querySelector('.browse');
+export let detailsContainer = document.querySelector(".details .container");
 
 // ^ js Varaibles
 export let gameContent;
@@ -45,12 +47,6 @@ function getNamesOfTheCategory() {
 }
 
 getNamesOfTheCategory();
-
-export async function getInfo(id) {
-  let gameId = new Details(id);
-  let gameDet = await gameId.getDetailsOfTheGame();
-  // console.log(gameDet);
-}
 
 iconDiv.onclick = function () {
   iconDiv.classList.toggle("active");
@@ -98,34 +94,6 @@ document.addEventListener('keydown', function(e) {
   }
 })
 
-
-// async function returnedBox() {
-//     let contentVari = new Display();
-//     box = await contentVari.displayGames();
-//     return box;
-// }
-
-// let boxEl = returnedBox();
-// window.addEventListener('load', async function() {
-//     let boxElement = await boxEl;
-//     for (let i = 0; i < boxElement.length; i++) {
-//         boxElement[i].addEventListener('click', function() {
-//             console.log(boxElement[i].getAttribute('data-id'))
-//         })
-//     }
-// })
-
-// function displayDetailsForTheClickedGame() {
-//     let detailsOfTheGame = new Details();
-//     gameDetailsForTheGame = detailsOfTheGame.getDetailsOfTheGame();
-//     let details = new Display();
-//     details.displayDetails();
-// }
-
-// // displayDetailsForTheClickedGame()
-// let box;
-
-export let detailsContainer = document.querySelector(".details .container");
-// import { gameBox } from "./ui-module.js";
-
-// export let gameBox = document.querySelector('.games .row .box');
+btn.onclick = function() {
+  input.focus();
+}
